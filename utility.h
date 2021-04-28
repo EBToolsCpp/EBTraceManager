@@ -17,6 +17,16 @@ enum MessageLevel
 	em_level_error,
 	em_level_critical,
 };
+
+enum MessageType
+{
+	em_type_console = 0,
+	em_type_log,
+	em_type_tcp,
+	em_type_count
+};
+
+
 }
 
 
