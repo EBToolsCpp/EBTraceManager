@@ -25,11 +25,11 @@ void erban::EBTraceInstance::SetRemark(const std::string &remark)
 }
 void erban::EBTraceInstance::CallFnc(std::function<void(const std::string &)> fnc, const std::string &message)
 { if (fnc)fnc(message); }
-erban::MessageType erban::EBTraceInstance::GetTraceType() const
+int erban::EBTraceInstance::GetTraceType() const
 {
 	return m_trace_type;
 }
-void erban::EBTraceInstance::SetTraceType(erban::MessageType trace_type)
+void erban::EBTraceInstance::SetTraceType(int trace_type)
 {
 	m_trace_type = trace_type;
 }
@@ -41,11 +41,11 @@ void erban::EBTraceInstance::SetTraceFnc(const std::function<void(const std::str
 {
 	m_trace_fnc = trace_fnc;
 }
-erban::MessageType erban::EBTraceInstance::GetDebugType() const
+int erban::EBTraceInstance::GetDebugType() const
 {
 	return m_debug_type;
 }
-void erban::EBTraceInstance::SetDebugType(erban::MessageType debug_type)
+void erban::EBTraceInstance::SetDebugType(int debug_type)
 {
 	m_debug_type = debug_type;
 }
@@ -57,11 +57,11 @@ void erban::EBTraceInstance::SetDebugFnc(const std::function<void(const std::str
 {
 	m_debug_fnc = debug_fnc;
 }
-erban::MessageType erban::EBTraceInstance::GetInfoType() const
+int erban::EBTraceInstance::GetInfoType() const
 {
 	return m_info_type;
 }
-void erban::EBTraceInstance::SetInfoType(erban::MessageType info_type)
+void erban::EBTraceInstance::SetInfoType(int info_type)
 {
 	m_info_type = info_type;
 }
@@ -73,11 +73,11 @@ void erban::EBTraceInstance::SetInfoFnc(const std::function<void(const std::stri
 {
 	m_info_fnc = info_fnc;
 }
-erban::MessageType erban::EBTraceInstance::GetWarnType() const
+int erban::EBTraceInstance::GetWarnType() const
 {
 	return m_warn_type;
 }
-void erban::EBTraceInstance::SetWarnType(erban::MessageType warn_type)
+void erban::EBTraceInstance::SetWarnType(int warn_type)
 {
 	m_warn_type = warn_type;
 }
@@ -89,11 +89,11 @@ void erban::EBTraceInstance::SetWarnFnc(const std::function<void(const std::stri
 {
 	m_warn_fnc = warn_fnc;
 }
-erban::MessageType erban::EBTraceInstance::GetErrorType() const
+int erban::EBTraceInstance::GetErrorType() const
 {
 	return m_error_type;
 }
-void erban::EBTraceInstance::SetErrorType(erban::MessageType error_type)
+void erban::EBTraceInstance::SetErrorType(int error_type)
 {
 	m_error_type = error_type;
 }
@@ -105,11 +105,11 @@ void erban::EBTraceInstance::SetErrorFnc(const std::function<void(const std::str
 {
 	m_error_fnc = error_fnc;
 }
-erban::MessageType erban::EBTraceInstance::GetCricitalType() const
+int erban::EBTraceInstance::GetCricitalType() const
 {
 	return m_cricital_type;
 }
-void erban::EBTraceInstance::SetCricitalType(erban::MessageType cricital_type)
+void erban::EBTraceInstance::SetCricitalType(int cricital_type)
 {
 	m_cricital_type = cricital_type;
 }

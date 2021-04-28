@@ -23,7 +23,7 @@ enum MessageType
 	em_type_console = 0,
 	em_type_log,
 	em_type_tcp,
-	em_type_count
+	em_type_count = 1<<em_type_console + 1<<em_type_log + 1<<em_type_tcp
 };
 
 

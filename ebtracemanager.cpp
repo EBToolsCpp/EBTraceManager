@@ -22,12 +22,12 @@ std::shared_ptr<EBTraceInstance> EBTraceManager::CreateTraceInstance(const std::
 }
 
 std::shared_ptr<EBTraceInstance> erban::EBTraceManager::CreateTraceInstance(const std::string &remark,
-                                                                            erban::MessageType trace_type,
-                                                                            erban::MessageType debug_type,
-                                                                            erban::MessageType info_type,
-                                                                            erban::MessageType warn_type,
-                                                                            erban::MessageType error_type,
-                                                                            erban::MessageType critical_type)
+                                                                            int trace_type,
+                                                                            int debug_type,
+                                                                            int info_type,
+                                                                            int warn_type,
+                                                                            int error_type,
+                                                                            int critical_type)
 {
 	std::shared_ptr<EBTraceInstance> instance = std::make_shared<EBTraceInstance>();
 	instance->SetRemark(remark);
@@ -51,4 +51,13 @@ std::shared_ptr<EBTraceInstance> erban::EBTraceManager::CreateTraceInstance(cons
 	instance->SetCricitalType(critical_type);
 
 	return instance;
+}
+bool EBTraceManager::SetCheckTraceTypeCallback(int type, std::function<void(const std::string &)> fnc)
+{
+	if(type <0 || type>= MessageType::em_type_count)
+	{
+		return false;
+	}
+	m_type_fnc[type] = fnc;
+	return true;
 }
